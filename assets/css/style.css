@@ -1,0 +1,646 @@
+@charset "UTF-8";
+
+/* =========================
+  TOP page only
+  SP first
+========================= */
+
+/* =========================
+  utility
+========================= */
+.topIntro__br {
+  display: none;
+}
+
+/* =========================
+  common width
+========================= */
+.mainCaption,
+.topItem,
+.access__content {
+  width: calc(100% - 32px);
+  margin-inline: auto;
+}
+
+/* =========================
+  FV
+========================= */
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  background: url("../imgs/main.jpg") center center / cover no-repeat;
+}
+
+.fv__logoTextWrap {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.fv__logoMark {
+  width: 30vw;
+  margin: 0 auto -2px;
+  padding-top: 44px;
+}
+
+.fv__logoMark img {
+  display: block;
+  /* width: 72px; */
+  height: auto;
+}
+
+.fv__logoText {
+  width: 60vw;
+  height: 10vh;
+}
+
+.fv__logoText path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 8s ease forwards;
+}
+
+.cls-1 {
+  stroke: #fff;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.fv__heading {
+  margin-top: 2px;
+}
+
+.fv__sub,
+.fv__shop,
+.fv__leadTop,
+.fv__leadBottom {
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.24);
+}
+
+.fv__sub {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  opacity: 0.96;
+}
+
+.fv__shop {
+  margin-top: 4px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  opacity: 0.98;
+}
+
+.fv__copy {
+  margin-top: 34px;
+}
+
+.fv__leadTop {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.fv__leadBottom {
+  margin-top: 4px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.6rem;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.fv__cta {
+  position: absolute;
+  left: 50%;
+  bottom: -26px;
+  z-index: 3;
+  width: calc(100% - 32px);
+  max-width: 320px;
+  transform: translateX(-50%);
+}
+
+.fv__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+  height: 56px;
+  gap: 14px;
+  padding: 0 26px;
+
+  border-radius: 9999px;
+
+  background: #8e879b;
+  color: #fff;
+
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.fv__btnText {
+  pointer-events: none;
+}
+
+.fv__btnArrow {
+  position: absolute;
+  right: 20px;
+
+  width: 10px;
+  height: 10px;
+
+  border-top: 1.5px solid #fff;
+  border-right: 1.5px solid #fff;
+
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.fv__btn:hover {
+  transform: translateY(-2px);
+  background: rgba(117, 111, 134, 0.96);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.fv__btn:hover .fv__btnArrow {
+  transform: translateX(4px) rotate(45deg);
+}
+
+/* =========================
+  main caption
+========================= */
+.mainCaption {
+  padding: 64px 0 52px;
+  text-align: center;
+}
+
+.mainCaptionH2 {
+  font-size: 2rem;
+  line-height: 1.8;
+  font-weight: 700;
+  color: #333;
+}
+
+.mainCaptionTxt {
+  width: 300px;
+  margin: 28px auto 0;
+
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.1;
+  color: #5b5350;
+}
+
+/* =========================
+  section common
+========================= */
+.about,
+.menu,
+.reserve {
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+
+.topItem,
+.access__content {
+  display: block;
+  width: 343px;
+}
+
+.topItem__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 32px 0 44px;
+  text-align: center;
+}
+
+.about h3,
+.menu h3,
+.reserve h3 {
+  margin-bottom: 16px;
+
+  font-size: 3.4rem;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+
+  color: #c8bcc4;
+}
+
+.topItem__text,
+.topItem__note {
+  width: 300px;
+  margin-inline: auto;
+
+  text-align: center;
+  color: #514845;
+}
+
+.topItem__text {
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+.topItem__note {
+  margin-top: 6px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.topItem__button {
+  margin-top: 20px;
+}
+
+/* =========================
+  arrow link
+========================= */
+.stickarrowSp {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 140px;
+  padding: 0 10px 8px;
+
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #3b3432;
+}
+
+.stickarrowSp::before,
+.stickarrowSp::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+
+.stickarrowSp::before {
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #8d8481;
+}
+
+.stickarrowSp::after {
+  right: 0;
+  width: 10px;
+
+  border-bottom: 1px solid #8d8481;
+
+  transform: rotate(40deg) translateY(1px);
+  transform-origin: right bottom;
+}
+
+/* =========================
+  images
+========================= */
+.aboutImg,
+.reserveImg,
+.mainImg__menu {
+  width: 100%;
+  aspect-ratio: 343 / 343;
+  object-fit: cover;
+}
+
+/* =========================
+  reserve
+========================= */
+.reserveButtons {
+  width: 300px;
+  margin: 24px auto 0;
+  gap: 10px;
+}
+
+/* =========================
+  access
+========================= */
+.accessSection {
+  margin-top: 24px;
+  padding: 40px 0 44px;
+  background: #ddd3c9;
+}
+
+.access {
+  text-align: center;
+
+  font-size: 1.5rem;
+  line-height: 1.8;
+  font-weight: 700;
+  color: #35312f;
+}
+
+.access__left {
+  max-width: 532px;
+}
+
+.access__detail {
+  margin-top: 18px;
+
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #403937;
+}
+
+.access__mapButtonWrap {
+  margin: 16px 0 32px;
+  text-align: center;
+}
+
+.access__mapLink {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 120px;
+  padding: 8px;
+
+  font-size: 1.4rem;
+}
+
+.access__mapLink::before,
+.access__mapLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+
+.access__mapLink::before {
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #5f5550;
+}
+
+.access__mapLink::after {
+  right: 0;
+  width: 10px;
+
+  border-bottom: 1px solid #5f5550;
+
+  transform: rotate(51deg) translateY(1px);
+  transform-origin: right bottom;
+}
+
+.access__infoRow {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: 10px;
+
+  margin-top: 18px;
+
+  font-size: 1.2rem;
+  line-height: 1.9;
+}
+
+.access__hours,
+.access__regular-holiday,
+.access__paymentTitle {
+  font-weight: 700;
+  color: #35312f;
+}
+
+/* =========================
+  tablet and up
+========================= */
+@media screen and (min-width: 680px) {
+  .topIntro__br {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fv__sub {
+    font-size: 1.7rem;
+    line-height: 1.6;
+  }
+
+  .fv__shop {
+    margin-top: 6px;
+    font-size: 1.5rem;
+  }
+
+  .fv__copy {
+    margin-top: 40px;
+  }
+
+  .fv__leadTop,
+  .fv__leadBottom  {
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+
+  .fv__leadBottom {
+    margin-top: 10px;
+  }
+
+  .fv__cta {
+    left: auto;
+    right: 0;
+    bottom: 0;
+
+    width: auto;
+    max-width: none;
+
+    transform: translate(-50%, 50%);
+  }
+
+  .fv__btn {
+    width: auto;
+    min-width: 240px;
+    height: 58px;
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================
+  PC
+========================= */
+@media screen and (min-width: 1200px) {
+
+  .fv__heading {
+    margin-top: -43px;
+  }
+
+  .mainCaption,
+  .topItem,
+  .access__content {
+    width: min(1200px, calc(100% - 80px));
+  }
+
+  .container {
+    min-height: 0;
+    aspect-ratio: 1440 / 825;
+  }
+
+  .fv__logoMark {
+    width: 15vw;
+    padding-top: 10px;
+  }
+
+  .fv__logoText {
+    width: 40vw;
+    height: 23vh;
+  }
+
+  .mainCaption {
+    padding: 56px 0;
+  }
+
+  .mainCaptionH2 {
+    font-size: 4rem;
+  }
+
+  .mainCaptionTxt {
+    width: 620px;
+    margin-top: 48px;
+
+    font-size: 1.8rem;
+    line-height: 2.3;
+  }
+
+  .topItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .topItem__body {
+    padding: 152px 80px 132px;
+  }
+
+  .topItem__body--menu {
+    padding: 170px 80px 155px;
+  }
+
+  .topItem__body--reserve {
+    padding: 97px 80px 120px;
+  }
+
+  .about h3,
+  .menu h3,
+  .reserve h3 {
+    margin-bottom: 28px;
+    font-size: 5.6rem;
+  }
+
+  .menu .mainImg__menu {
+    order: 2;
+  }
+
+  .menu .topItem__body--menu {
+    order: 1;
+  }
+
+  .topItem__text,
+  .topItem__note {
+    width: 400px;
+  }
+
+  .topItem__text {
+    font-size: 1.6rem;
+  }
+
+  .topItem__note {
+    font-size: 1.4rem;
+  }
+
+  .topItem__button {
+    margin-top: 34px;
+  }
+
+  .stickarrowSp {
+    min-width: 198px;
+    padding-bottom: 12px;
+    font-size: 1.8rem;
+  }
+
+  .aboutImg,
+  .reserveImg,
+  .mainImg__menu {
+    aspect-ratio: 560 / 560;
+  }
+
+  .reserve {
+    padding-bottom: 64px;
+  }
+
+  .reserveButtons {
+    width: 420px;
+    margin-top: 36px;
+    gap: 16px;
+  }
+
+  .reserveButton {
+    min-height: 58px;
+    padding: 14px 22px;
+    font-size: 1.6rem;
+  }
+
+  .reserveButton--line span {
+    font-size: 1.2rem;
+  }
+
+  .access__content {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+  }
+
+  .access {
+    text-align: left;
+    font-size: 1.8rem;
+  }
+
+  .access__detail {
+    font-size: 1.5rem;
+    line-height: 2.1;
+  }
+
+  .access__mapButtonWrap {
+    margin: 0 32px;
+    text-align: right;
+  }
+
+  .access__mapLink {
+    font-size: 2rem;
+  }
+
+  .access__infoRow {
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+
+    font-size: 1.5rem;
+  }
+}

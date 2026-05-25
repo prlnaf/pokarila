@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+/* =========================
+  reserve 全体（SP）
+========================= */
+.reserve {
+  padding: 32px 16px 20px;
+  background-color: #f5f4f2;
+}
+
+.spBr {
+  display: block;
+}
+
+.reserve__inner {
+  max-width: 343px;
+  margin: 0 auto;
+}
+
+/* =========================
+  見出し（SP）
+========================= */
+.reserve__lead {
+  text-align: center;
+  margin: 40px 0;
+  line-height: 1.9;
+  color: #4a473f;
+}
+
+/* =========================
+  カード（SP）
+========================= */
+.reserve__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.reserveCard {
+  width: 100%;
+  max-width: 343px;
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 上の帯 */
+.reserveCard__title {
+  padding: 16px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.reserveCard__title--line {
+  background: #d9d6ce;
+}
+
+.reserveCard__title--hotpepper {
+  background: #e9e1d6;
+}
+
+/* 中身 */
+.reserveCard__list {
+  flex: 1;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.reserveCard__item {
+  position: relative;
+  padding-left: 48px;
+  line-height: 1.8;
+}
+
+.reserveCard__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e4e0d8;
+}
+
+/* =========================
+  PC（768px以上）
+========================= */
+@media screen and (min-width: 768px) {
+  .spBr {
+    display: none;
+  }
+  
+
+  .reserve {
+    padding: 120px 20px;
+  }
+
+  .reserve__inner {
+    max-width: 720px;
+  }
+
+  .reserve__lead {
+    margin-bottom: 64px;
+    line-height: 2;
+  }
+
+  /* カード横並び */
+  .reserve__cards {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .reserveCard {
+    width: 340px;
+
+  }
+
+
+  /* ボタン横並び */
+  .reserveButtons {
+    gap: 24px;
+  }
+}

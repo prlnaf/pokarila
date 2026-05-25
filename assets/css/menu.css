@@ -1,0 +1,395 @@
+@charset "UTF-8";
+
+/* =========================
+  menu herbs / SP first
+========================= */
+.menu {
+  padding: 32px 0 96px;
+  max-width: 343px;
+  margin: auto;
+}
+
+.menu__inner {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+
+.menuItemPc {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* row-gap: 48px; */
+  justify-items: center;
+}
+
+.menuItem,
+.menuItem3 {
+  width: 100%;
+  max-width: 343px;
+  margin-bottom: 40px;
+}
+
+.menuItem__img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 288:288 */
+  object-fit: cover;
+  border-radius: 32px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.menu__purpose {
+  margin-top: 28px;
+}
+
+.square {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #2f2a28;
+}
+
+.square::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 4px;
+  height: 24px;
+  background: #18390d;
+  transform: translateY(-50%);
+}
+
+.circle {
+  position: relative;
+  padding-left: 22px;
+  font-size: 1.6rem;
+  line-height: 1.9;
+  color: #3d3734;
+}
+
+.circle + .circle {
+  margin-top: 16px;
+}
+
+.circle::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #3d3734;
+}
+
+/* =========================
+  desktop and up
+========================= */
+@media screen and (min-width: 1024px) {
+  .menu {
+    padding: 40px 0 0;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .menuItemPc {
+    grid-template-columns: repeat(3, 288px);
+    column-gap: 48px;
+    justify-content: center;
+    align-items: start;
+
+  }
+
+  .menuItem,
+  .menuItem3 {
+    max-width: none;
+    width: 288px;
+    margin-bottom: 96px;
+  }
+
+  .menuItem__img {
+    width: 288px;
+    height: 288px;
+  }
+
+  .menu__purpose {
+    margin-top: 30px;
+  }
+
+  .square {
+    margin-bottom: 28px;
+    font-size: 1.9rem;
+  }
+
+  .circle {
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+
+  .circle + .circle {
+    margin-top: 18px;
+  }
+}
+
+
+
+/* =========================
+  step section / SP first
+========================= */
+.stepSection {
+  width: min(100% - 32px, 343px);
+  margin: 0 auto;
+  padding: 0 0 72px;
+}
+
+.stepCard,
+.stepCard--reverse {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 48px;
+}
+
+.stepCard__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.stepCard__number {
+  color: #18390d;
+  font-size: 2.8rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.stepCard__body {
+  text-align: left;
+}
+
+.stepCard__title {
+  margin: 0 0 12px;
+  color: #4b4340;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.stepCard__text {
+  color: #4f4744;
+  font-size: 1.6rem;
+  line-height: 1.9;
+}
+
+/* =========================
+  tablet / 768px〜1100px
+========================= */
+@media screen and (min-width: 768px) {
+  .stepSection {
+    width: min(100% - 64px, 640px);
+    padding-bottom: 88px;
+  }
+
+  .stepCard,
+  .stepCard--reverse {
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+
+  .stepCard__image {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .stepCard__number {
+    font-size: 3.6rem;
+  }
+
+  .stepCard__text {
+    font-size: 1.7rem;
+  }
+}
+
+/* =========================
+  PC / 1101px〜
+========================= */
+@media screen and (min-width: 1101px) {
+  .stepSection {
+    width: min(100% - 72px, 960px);
+    padding-bottom: 96px;
+  }
+
+  .stepCard,
+  .stepCard--reverse {
+    display: grid;
+    grid-template-columns: 400px 72px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  .stepCard__image {
+    width: 400px;
+    height: 300px;
+    max-width: none;
+    margin: 0;
+  }
+
+  .stepCard__number {
+    font-size: 4.8rem;
+  }
+
+  .stepCard__title {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .stepCard__text {
+    font-size: 1.8rem;
+  }
+
+  .stepCard:nth-of-type(even),
+  .stepCard--reverse {
+    grid-template-columns: 72px minmax(0, 1fr) 400px;
+  }
+
+  .stepCard:nth-of-type(even) .stepCard__image,
+  .stepCard--reverse .stepCard__image {
+    order: 3;
+  }
+
+  .stepCard:nth-of-type(even) .stepCard__number,
+  .stepCard--reverse .stepCard__number {
+    order: 1;
+  }
+
+  .stepCard:nth-of-type(even) .stepCard__body,
+  .stepCard--reverse .stepCard__body {
+    order: 2;
+  }
+}
+
+
+/* =========================
+  guide CTA
+========================= */
+
+.guideCta {
+    margin: 96px 0;
+    padding: 0 16px; /* SP左右余白 */
+  }
+  
+  .guideCta__inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  
+    /* 背景（ほんのり透過） */
+    background: rgba(7, 37, 0, 0.06);
+  
+    /* 角丸で柔らかさ出す */
+    border-radius: 16px;
+  
+    text-align: center;
+  }
+  
+  /* 見出し */
+  .guideCta__lead {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #18390d;
+  }
+  
+  /* 補足文 */
+  .guideCta__text {
+    margin-top: 8px;
+    font-size: 1.3rem;
+    color: #5b5350;
+  }
+  
+  /* ボタン */
+  .guideCta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-top: 24px;
+    padding: 14px 32px;
+  
+    background: #072500;
+    color: #fff;
+  
+    font-size: 1.4rem;
+    border-radius: 999px;
+  
+    text-decoration: none;
+    position: relative;
+  }
+  
+  /* 矢印 */
+  .guideCta__btn::after {
+    content: "";
+    margin-left: 10px;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(50deg);
+  }
+/* =========================
+  price / SP first
+========================= */
+.price {
+  padding: 0 0 72px;
+}
+
+.price__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.price__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* gap: 24px; */
+}
+
+.price__card {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.price__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================
+  tablet and up
+========================= */
+@media screen and (min-width: 768px) {
+  .price {
+    padding-bottom: 96px;
+  }
+
+  .price__inner {
+    width: min(1200px, calc(100% - 80px));
+  }
+
+  .price__cards {
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 36px; */
+    align-items: start;
+    justify-content: center;
+  }
+
+  .price__card {
+    max-width: 288px;
+  }
+}
